@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.contrib import messages   # for error messages
-from script import scriptAmazon, scriptSelenium # import of external scraping scripts
+from script.scriptAmazon import AmazonFetcher # import of external scraping scripts
+from script.scriptSelenium import PriceFetcher
+
 # Create your views here.
 
 def HomePageView(request):
@@ -8,16 +10,26 @@ def HomePageView(request):
         URL = request.POST.get('actualurl')
         print(URL)
         # beautifulsoup script call and recording result
-        result_amazon = scriptAmazon(URL) #calling external amazon scraping script which is based upon beautifulsoup
+        result_amazon = AmazonFetcher(URL) #calling external amazon scraping script which is based upon beautifulsoup
         result_amazon_price = result_amazon[0]
         result_amazon_description = result_amazon[1]
 
         #selenium script call and recroding results
-        result_selenium = scriptSelenium(URL)
+        result_selenium = PriceFetcher(URL)
         result_selenium_min = result_selenium[0]
         result_selenium_avg = result_selenium[1]
         result_selenium_max = result_selenium[2]
-        return render( request, "index.html")
+        result_selenium_image = result_selenium[3]
+
+        #returning to home.html page
+        return render( request, "index.html",{
+            'liveprice': result_amazon_price,
+            'des': result_amazon_description,
+            'min': result_selenium_min,
+            'max': result_selenium_max,
+            'avg': result_selenium_avg,
+            'image' : result_selenium_image,
+        })
     else:
         return render(request, "home.html ")
 

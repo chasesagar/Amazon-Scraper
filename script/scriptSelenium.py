@@ -28,17 +28,18 @@ def PriceFetcher(URL):
     submit = driver.find_element_by_id("load_button")
     submit.click()
 
-    time.sleep(1)
+    time.sleep(3)
 
     avprice = driver.find_element_by_id("avgPrice").text
     maxprice = driver.find_element_by_id("maximumPrice").text
     minprice = driver.find_element_by_id("minimumPrice").text
-    picsrc = driver.find_element_by_id("productImageURL")
+    image = driver.find_element_by_id("productImageURL").get_attribute("src")
+    
+    
+    return(minprice, avprice, maxprice, image)
 
-    return(minprice, avprice, maxprice)
 
-#driver
-search_link = "https://www.amazon.in/New-Apple-iPhone-12-128GB/dp/B08L5S1NT7/ref=sr_1_3?dchild=1&keywords=iphone+12&qid=1606061094&sr=8-3"
+# search_link = "https://www.amazon.in/New-Apple-iPhone-12-128GB/dp/B08L5S1NT7/ref=sr_1_3?dchild=1&keywords=iphone+12&qid=1606061094&sr=8-3"
 
-print(PriceFetcher(search_link))
+# print(PriceFetcher(search_link))
 
