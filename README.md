@@ -40,19 +40,19 @@ Django based scrping project which used to fetch a product `Image`, `Minimum pri
 
 * Motivation & desire to learn something new, that's all folks, let's get started.
 
-* first install a virtual envirmoment through command line using command mentioned below.
+* first install a virtual envirmoment through command line using command mentioned below. <br />
 `pip install virtualenvwrapper-win`
 
-* create a user using below command
+* create a user using below command <br />
 `mkvirtualenv name of your choice`
 
-* Running virtual enviroment
+* Running virtual enviroment <br />
 `workon name you choosed above`
 
-* Install required files using below command.
+* Install required files using below command <br />
 `pip install -r requirements.txt`
 
-* Run server using command
+* Run server using command <br />
 `python manage.py runserver`
 
 * The server is now running at [localhost:8000](localhost:8000)
@@ -61,6 +61,7 @@ Django based scrping project which used to fetch a product `Image`, `Minimum pri
 ## Demo
 
 ![Product Image](https://github.com/chasesagar/Amazon-Scraper/blob/master/demo-1.png)
+<br />
 ![Product Image](https://github.com/chasesagar/Amazon-Scraper/blob/master/demo-2.png)
 
 ## Quick Start
