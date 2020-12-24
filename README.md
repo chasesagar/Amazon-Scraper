@@ -16,7 +16,7 @@ Django based scrping project which used to fetch a product `Image`, `Minimum pri
 
 <img align="left" alt="JavaScript" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" />
 
-<img align="left" alt="React" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" />
+<img align="left" alt="Python" width="35px" src="https://www.flaticon.com/svg/static/icons/svg/2/2181.svg" />
 
 
 <img align="left" alt="Django" width="35px" src="https://cdn.iconscout.com/icon/free/png-512/django-2-282855.png" />
